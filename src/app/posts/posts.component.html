@@ -1,0 +1,20 @@
+<section style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div *ngFor="let item of postlist">
+        <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+            <div class="card p-4">
+                <div class=" image d-flex flex-column justify-content-center align-items-center">
+                    <button class="btn btn-secondary">
+                        <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
+                    </button>
+                    <span class="name mt-3">{{item.id}}</span>
+                    <span class="idd">{{item.title}}</span>
+
+                    <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span
+                            class="idd1">{{item.body}}</span> <span><i class="fa fa-copy"></i></span> </div>
+                    <div class=" d-flex mt-2"> <button class="btn1 btn-dark" (click)="seeComment(item.id)">See
+                            Comment</button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

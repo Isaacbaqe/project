@@ -1,0 +1,23 @@
+sectionComment{
+    background-color: rgb(122, 104, 104);
+    width: 100%;
+    padding: 10px;
+}
+.comments{
+    border-radius: 10px;
+    overflow: hidden;
+    margin:20px 10px;
+    background-color: rgb(255, 255, 255);
+}
+.titleComment{
+    background-color: black;
+    color: aliceblue;
+    padding: 6px;
+    margin: 0px;
+}
+.emailComment{
+    background-color: bisque;
+}
+.emailComment,.bodyComment{
+    padding:  6px;
+}

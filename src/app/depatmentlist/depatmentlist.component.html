@@ -1,0 +1,18 @@
+<!--   
+<div class="cat">
+    <select   class="form-select" aria-label="Default select example">
+        <option   (click)="gotocate(cat)"   *ngFor="let cat of categorys">  {{cat.ID}} <b>  </b>{{cat.Name}} </option>
+    </select>
+</div>
+<style>
+    .cat
+    {
+        width: 300px;
+    }
+</style> -->
+<div    [class.selecteditem]="Isselected(cat)"  (click)="gotocate(cat)"   *ngFor="let cat of categorys">
+    <h3    >
+        {{cat.Name}}
+    </h3>
+</div>
+ 

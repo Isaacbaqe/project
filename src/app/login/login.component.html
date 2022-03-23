@@ -1,0 +1,31 @@
+
+ <h1 class="display-3">welcom to our store plz! login</h1>
+<div class="container-fluid">
+    <form #loginForm="ngForm"> 
+       
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      
+        <div class="row mb-3" *ngIf="email.errors&&email.touched">
+            <small  class="text-danger"*ngIf="email.errors['required']">email is reqired</small>
+            <small class="text-danger" *ngIf="email.errors['pattern']">invalid must not contain number</small>
+          </div>  <input type="email" pattern="[a-z0-9_%+-]+@[a-z0 -9.-]+\.[a-z]{2,}$" required [class.is-invalid]="email.invalid &&email.touched" name="txtemail" #email="ngModel" [(ngModel)]="userlogin.email" class="form-control" id="inputEmail3">
+    </div>
+   
+  
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+     
+        <div class="row mb-3" *ngIf="password.errors&&password.touched">
+            <small  class="text-danger" *ngIf="password.errors['Required']">password is reqired</small>
+            <small class="text-danger" *ngIf="password.errors['Pattern']">not match</small>
+          </div> <input type="password" pattern=".{7,}" required [class.is-invalid]="password.invalid &&password.touched" name="txtpasswoed" #password="ngModel" [(ngModel)]="userlogin.password" class="form-control" id="inputPassword3">
+    </div>
+    
+  </div>
+  <input type="submit"class="btn btn-primary" value="Register"    routerLink="/home"   [disabled]="loginForm.form.invalid"> 
+  </form>
+  <br><br><br><br><br><br> <br><br><br><br><br><br>
+</div>
+
